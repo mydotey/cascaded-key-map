@@ -2,6 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyTitle>MyDotey.NameCache</AssemblyTitle>
+    <AssemblyName>MyDotey.NameCache</AssemblyName>
+    <PackageId>MyDotey.NameCache</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>koqizhao</Authors>
+    <Description>Name Cache utility for name reuse and less memory usage</Description>
+    <Copyright>koqizhao</Copyright>
+
+    <PackageTags>namecache;name-cache;string-cache;stringcache</PackageTags>
+    <PackageReleaseNotes>Name Cache utility for name reuse and less memory usage</PackageReleaseNotes>
+    <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/mydotey/name-cache</PackageProjectUrl>
+    <PackageLicenseUrl>https://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/mydotey/name-cache.git</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
