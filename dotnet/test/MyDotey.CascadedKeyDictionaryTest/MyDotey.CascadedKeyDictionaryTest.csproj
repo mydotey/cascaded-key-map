@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MyDotey.NameCache\MyDotey.NameCache.csproj" />
+    <ProjectReference Include="..\..\src\MyDotey.CascadedKeyDictionary\MyDotey.CascadedKeyDictionary.csproj" />
   </ItemGroup>
 
 </Project>

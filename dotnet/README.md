@@ -1,32 +1,44 @@
-# Name Cache
+# Cascaded Key Dictionary
 
 ## NuGet package
 
 ```sh
-dotnet add package MyDotey.NameCache -v 1.0.0
+dotnet add package MyDotey.CascadedKeyDictionary -v 1.0.0
 ```
 
 ## Usage
 
 ```cs
-using MyDotey.NameCache;
-using NC = MyDotey.NameCache.NameCache;
+using MyDotey.Collections.Generic;
 
 namespace MyDotey.NameCacheTest
 {
-    public class NameCacheTest
+    public class CascadedKeyDictionaryTest
     {
         [Fact]
-        public void TestGetName()
+        public void TestDemo()
         {
-            string separator = ".";
-            NC nameCache = new NC(separator);
-            CachedName name1 = nameCache.Get("1", "2", "3");
-            CachedName name2 = nameCache.Get("1", "2", "3");
+            CascadedKeyDictionary<String, String> map = new CascadedKeyDictionary<String, String>();
 
-            Assert.Equal("1.2.3", name1.Name);
-            Assert.True(Object.ReferenceEquals(name1, name2));
-            Assert.True(Object.ReferenceEquals(name1.Name, name2.Name));
+            map.Put("ok", "key1", "key2", "key3");
+            String value = map.Get("key1", "key2", "key3");
+            Assert.Equal("ok", value);
+
+            map.Put("ok2", "key1", "key2", "key3", "key4");
+            value = map.Get("key1", "key2", "key3", "key4");
+            Assert.Equal("ok2", value);
+
+            value = map.GetOrAdd(cascadedKeys => "ok3", "key1", "key2");
+            Assert.Equal("ok3", value);
+
+            map.Remove("key1", "key2");
+
+            Assert.Equal(2, map.Count);
+
+            foreach (CascadedKeyValuePair<String, String> pair in map)
+            {
+                Console.WriteLine("cascadedKeys: [ {0} ], value: {1}\n", String.Join(", ", pair.CascadedKeys), pair.Value);
+            }
         }
     }
 }

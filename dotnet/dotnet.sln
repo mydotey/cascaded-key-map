@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E871BED1-0D56-47FC-8ADD-8E08EC8D17C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDotey.NameCache", "src\MyDotey.NameCache\MyDotey.NameCache.csproj", "{BA390257-FCC9-49D7-BD09-D83C02CC93A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDotey.NameCache", "src\MyDotey.CascadedKeyDictionary\MyDotey.CascadedKeyDictionary.csproj", "{BA390257-FCC9-49D7-BD09-D83C02CC93A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4774FCB3-2137-48E0-A413-EFBD4AC06D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDotey.NameCacheTest", "test\MyDotey.NameCacheTest\MyDotey.NameCacheTest.csproj", "{69772FF2-F297-4AE2-9440-AFB95E0AF705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDotey.NameCacheTest", "test\MyDotey.CascadedKeyDictionaryTest\MyDotey.CascadedKeyDictionaryTest.csproj", "{69772FF2-F297-4AE2-9440-AFB95E0AF705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

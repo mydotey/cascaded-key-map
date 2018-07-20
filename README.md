@@ -17,4 +17,4 @@ a concurrent map has cascaded keys like:
 
 ## Developers
 
-* Qiang Zhao <koqizhao@outllook.com>
+* Qiang Zhao <koqizhao@outlook.com>
