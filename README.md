@@ -1,18 +1,19 @@
-# Name Cache
+# Cascaded Key Map
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-A library to save memory use for gc-style language like Java/C#
-
-auto-generate the name, reuse the name, and less momery use, no gc impact
+a concurrent map has cascaded keys like:
+    put(value, key1, key2, ..., keyN)
+    get(key1, key2, ..., keyN)
+    remove(key1, key2, ..., keyN)
 
 ## Usage
 
 * java
-  https://github.com/mydotey/name-cache/tree/master/java
+  https://github.com/mydotey/cascaded-key-map/tree/master/java
 
 * dotnet
-  https://github.com/mydotey/name-cache/tree/master/dotnet
+  https://github.com/mydotey/cascaded-key-map/tree/master/dotnet
 
 ## Developers
 

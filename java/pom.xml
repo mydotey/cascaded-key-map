@@ -3,13 +3,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mydotey.namecache</groupId>
+    <groupId>org.mydotey.cascadedkeymap</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>parent</name>
-    <description>name cache util</description>
-    <url>https://github.com/mydotey/name-cache</url>
+    <description>cascaded key map</description>
+    <url>https://github.com/mydotey/cascaded-key-map</url>
 
     <licenses>
         <license>
@@ -34,8 +34,8 @@
     </developers>
 
     <scm>
-        <url>https://github.com/mydotey/name-cache</url>
-        <connection>git@github.com:mydotey/name-cache.git</connection>
+        <url>https://github.com/mydotey/cascaded-key-map</url>
+        <connection>git@github.com:mydotey/cascaded-key-map.git</connection>
     </scm>  
 
     <properties>
@@ -50,14 +50,14 @@
     </properties>
 
     <modules>
-        <module>name-cache</module>
+        <module>cascaded-key-map</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.mydotey.namecache</groupId>
-                <artifactId>name-cache</artifactId>
+                <groupId>org.mydotey.cascadedkeymap</groupId>
+                <artifactId>cascaded-key-map</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

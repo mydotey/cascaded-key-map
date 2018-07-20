@@ -1,11 +1,11 @@
-# Name Cache
+# Cascaded Key Map
 
 ## maven dependency
 
 ```xml
 <dependency>
-    <groupId>org.mydotey.namecache</groupId>
-    <artifactId>name-cache</artifactId>
+    <groupId>org.mydotey.cascadedkeymap</groupId>
+    <artifactId>cascaded-key-map</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
@@ -14,14 +14,26 @@
 
 ```java
     @Test
-    public void testGetName() {
-        String separator = ".";
-        NameCache nameCache = new NameCache(separator);
-        CachedName name1 = nameCache.get("1", "2", "3");
-        CachedName name2 = nameCache.get("1", "2", "3");
+    public void testDemo() {
+        CascadedKeyMap<String, String> map = new CascadedKeyMap<>();
 
-        Assert.assertEquals("1.2.3", name1.getName());
-        Assert.assertTrue(name1 == name2);
-        Assert.assertTrue(name1.getName() == name2.getName());
+        map.put("ok", "key1", "key2", "key3");
+        String value = map.get("key1", "key2", "key3");
+        Assert.assertEquals("ok", value);
+
+        map.put("ok2", "key1", "key2", "key3", "key4");
+        value = map.get("key1", "key2", "key3", "key4");
+        Assert.assertEquals("ok2", value);
+
+        value = map.getOrAdd(cascadedKeys -> "ok3", "key1", "key2");
+        Assert.assertEquals("ok3", value);
+
+        map.remove("key1", "key2");
+
+        Assert.assertEquals(2, map.size());
+
+        for (CascadedKeyValuePair<String, String> pair : map) {
+            System.out.printf("cascadedKeys: %s, value: %s\n", pair.getCascadedKeys(), pair.getValue());
+        }
     }
 ```

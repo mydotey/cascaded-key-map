@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.mydotey.namecache</groupId>
+        <groupId>org.mydotey.cascadedkeymap</groupId>
         <artifactId>parent</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>name-cache</artifactId>
+    <artifactId>cascaded-key-map</artifactId>
     <packaging>jar</packaging>
-    <name>name-cache</name>
-    <description>name cache util</description>
+    <name>cascaded-key-map</name>
+    <description>cascaded key map</description>
 
     <dependencies>
         <dependency>
