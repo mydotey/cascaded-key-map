@@ -20,5 +20,17 @@ namespace MyDotey.NameCacheTest
             Assert.True(Object.ReferenceEquals(name1, name2));
             Assert.True(Object.ReferenceEquals(name1.Name, name2.Name));
         }
+
+        [Fact]
+        public void TestGetName2()
+        {
+            NC nameCache = new NC();
+            CachedName name1 = nameCache.Get("1", "2", "3");
+            CachedName name2 = nameCache.Get("1", "2", "3");
+
+            Assert.Equal("123", name1.Name);
+            Assert.True(Object.ReferenceEquals(name1, name2));
+            Assert.True(Object.ReferenceEquals(name1.Name, name2.Name));
+        }
     }
 }

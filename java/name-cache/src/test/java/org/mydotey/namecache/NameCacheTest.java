@@ -22,4 +22,15 @@ public class NameCacheTest {
         Assert.assertTrue(name1.getName() == name2.getName());
     }
 
+    @Test
+    public void testGetName2() {
+        NameCache nameCache = new NameCache();
+        CachedName name1 = nameCache.get("1", "2", "3");
+        CachedName name2 = nameCache.get("1", "2", "3");
+
+        Assert.assertEquals("123", name1.getName());
+        Assert.assertTrue(name1 == name2);
+        Assert.assertTrue(name1.getName() == name2.getName());
+    }
+
 }

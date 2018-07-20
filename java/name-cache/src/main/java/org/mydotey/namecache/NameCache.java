@@ -16,8 +16,12 @@ public class NameCache {
     private Function<Object, NameCacheNode<Object, CachedName>> _nodeCreator = k -> new NameCacheNode<Object, CachedName>(
             k);
 
+    public NameCache() {
+        this(null);
+    }
+
     public NameCache(String separator) {
-        _separator = separator;
+        _separator = separator == null ? "" : separator.trim();
     }
 
     public CachedName get(Object... nameParts) {

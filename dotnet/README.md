@@ -3,7 +3,7 @@
 ## NuGet package
 
 ```sh
-dotnet Add package MyDotey.NameCache -v 1.0.0
+dotnet add package MyDotey.NameCache -v 1.0.0
 ```
 
 ## Usage

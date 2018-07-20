@@ -10,9 +10,15 @@ namespace MyDotey.NameCache
         private NameCacheNode<object, CachedName> _namePartTree = new NameCacheNode<object, CachedName>();
         private string _separator;
 
+        public NameCache()
+            : this(null)
+        {
+
+        }
+
         public NameCache(string separator)
         {
-            _separator = separator;
+            _separator = separator == null ? String.Empty : separator.Trim();
         }
 
         public CachedName Get(params object[] nameParts)
